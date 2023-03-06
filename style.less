@@ -1,0 +1,128 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.mixin (@flxdir, @just, @align) {
+    display: flex;
+    gap: 2rem;
+    justify-content: @just;
+    align-items: @align;
+    flex-direction: @flxdir;
+}
+
+.text (@siz, @wght, @color) {
+    font-size: @siz;
+    font-weight: @wght;
+    color: @color;
+}
+
+.body (@bg, @wid, @hght, @pad, @br) {
+    border: none;
+    background-color: @bg;
+    width: @wid;
+    height: @hght;
+    padding: @pad;
+    border-radius: @br;
+}
+
+body {
+    width: fit;
+    margin: auto;
+    // font-family: 'Epilogue', sans-serif;
+    font-family: 'League Spartan', sans-serif;
+    // font-family: 'Lexend Deca', sans-serif;
+    // font-family: 'Livvic', sans-serif;
+}
+
+.section {
+    .mixin(column, center, center);
+    .body(white, 80rem, 40rem, 2rem, 0);
+    .top {
+        .mixin(0, space-between, flex-end);
+        .body(white, 70rem, 20rem, 2rem, 0);
+        .section-one {
+            .mixin(column, flex-end, center);
+            .text(25px, 700, hsl(300, 43%, 22%));
+            .body(white, 30rem, 12rem, 2rem, 0);
+            p {
+                .text(15px, 400, hsl(300, 43%, 22%));
+            }
+        }
+        .section-two {
+            .body(white, 30rem, 20rem, 2rem, 0);
+            .mixin(column, flex-end, 0);
+            margin-top: 0rem;
+            @media (max-width: 1023px) {
+                display: block;
+            }
+            .content {
+                .mixin(0, 0, center);
+                .body(hsl(333, 24%, 93%), 25rem, 1rem, 18px, 10px);
+                h4 {
+                    .text(11px, 900, hsl(300, 43%, 22%));
+                }
+                .star {
+                    .mixin(0, 0, center);
+                    gap: 4px;
+                }
+            }
+        }
+    }
+    .section-three {
+        .mixin(0, center, center);
+        gap: 4rem;
+        .body(0, 78rem, 24rem, 2rem, 0);
+        .content {
+            .mixin(column, center, flex-start);
+            .text(17px, 700, white);
+            .body(hsl(300, 43%, 22%), 18rem, 14rem, 2rem, 10px);
+            .head {
+                .mixin(0, 0, center);
+                img {
+                    border: none;
+                    border-radius: 50%;
+                }
+                .topic {
+                    .mixin(column, center, 0);
+                    gap: 4px;
+                    span {
+                        .text(17px, 700, hsl(333, 80%, 67%));
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 1023px) {
+    body {
+        width: 30rem;
+        overflow-x: hidden;
+    }
+   .section {
+    .mixin(column, center, center);
+    gap: 5rem;
+    .body(white, 30rem, 40rem, 2rem, 0);
+    margin:15rem auto;
+    .top {
+        .mixin(column, center, center);
+        margin-top: 10rem;
+        .section-one {
+            .body(white, 30rem, 10rem, 2rem, 0);
+            p {
+                width: 20rem;
+            }
+        }
+        .section-two {
+            .body(white, 30rem, 20rem, 2rem, 0);
+            .mixin(column, flex-end, 0);
+        }
+    }
+    .section-three {
+        .mixin(column, center, center);
+        margin-top: 10rem;
+    }
+   }
+}

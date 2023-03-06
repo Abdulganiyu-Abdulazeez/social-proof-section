@@ -1,0 +1,218 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  width: fit;
+  margin: auto;
+  font-family: 'League Spartan', sans-serif;
+}
+.section {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border: none;
+  background-color: white;
+  width: 80rem;
+  height: 40rem;
+  padding: 2rem;
+  border-radius: 0;
+}
+.section .top {
+  display: flex;
+  gap: 2rem;
+  justify-content: space-between;
+  align-items: flex-end;
+  flex-direction: 0;
+  border: none;
+  background-color: white;
+  width: 70rem;
+  height: 20rem;
+  padding: 2rem;
+  border-radius: 0;
+}
+.section .top .section-one {
+  display: flex;
+  gap: 2rem;
+  justify-content: flex-end;
+  align-items: center;
+  flex-direction: column;
+  font-size: 25px;
+  font-weight: 700;
+  color: hsl(300, 43%, 22%);
+  border: none;
+  background-color: white;
+  width: 30rem;
+  height: 12rem;
+  padding: 2rem;
+  border-radius: 0;
+}
+.section .top .section-one p {
+  font-size: 15px;
+  font-weight: 400;
+  color: hsl(300, 43%, 22%);
+}
+.section .top .section-two {
+  border: none;
+  background-color: white;
+  width: 30rem;
+  height: 20rem;
+  padding: 2rem;
+  border-radius: 0;
+  display: flex;
+  gap: 2rem;
+  justify-content: flex-end;
+  align-items: 0;
+  flex-direction: column;
+  margin-top: 0rem;
+}
+@media (max-width: 1023px) {
+  .section .top .section-two {
+    display: block;
+  }
+}
+.section .top .section-two .content {
+  display: flex;
+  gap: 2rem;
+  justify-content: 0;
+  align-items: center;
+  flex-direction: 0;
+  border: none;
+  background-color: hsl(333, 24%, 93%);
+  width: 25rem;
+  height: 1rem;
+  padding: 18px;
+  border-radius: 10px;
+}
+.section .top .section-two .content h4 {
+  font-size: 11px;
+  font-weight: 900;
+  color: hsl(300, 43%, 22%);
+}
+.section .top .section-two .content .star {
+  display: flex;
+  gap: 2rem;
+  justify-content: 0;
+  align-items: center;
+  flex-direction: 0;
+  gap: 4px;
+}
+.section .section-three {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  align-items: center;
+  flex-direction: 0;
+  gap: 4rem;
+  border: none;
+  background-color: 0;
+  width: 78rem;
+  height: 24rem;
+  padding: 2rem;
+  border-radius: 0;
+}
+.section .section-three .content {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+  font-size: 17px;
+  font-weight: 700;
+  color: white;
+  border: none;
+  background-color: hsl(300, 43%, 22%);
+  width: 18rem;
+  height: 14rem;
+  padding: 2rem;
+  border-radius: 10px;
+}
+.section .section-three .content .head {
+  display: flex;
+  gap: 2rem;
+  justify-content: 0;
+  align-items: center;
+  flex-direction: 0;
+}
+.section .section-three .content .head img {
+  border: none;
+  border-radius: 50%;
+}
+.section .section-three .content .head .topic {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  align-items: 0;
+  flex-direction: column;
+  gap: 4px;
+}
+.section .section-three .content .head .topic span {
+  font-size: 17px;
+  font-weight: 700;
+  color: hsl(333, 80%, 67%);
+}
+@media (max-width: 1023px) {
+  body {
+    width: 30rem;
+    overflow-x: hidden;
+  }
+  .section {
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 5rem;
+    border: none;
+    background-color: white;
+    width: 30rem;
+    height: 40rem;
+    padding: 2rem;
+    border-radius: 0;
+    margin: 15rem auto;
+  }
+  .section .top {
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 10rem;
+  }
+  .section .top .section-one {
+    border: none;
+    background-color: white;
+    width: 30rem;
+    height: 10rem;
+    padding: 2rem;
+    border-radius: 0;
+  }
+  .section .top .section-one p {
+    width: 20rem;
+    margin-left: -1rem;
+  }
+  .section .top .section-two {
+    border: none;
+    background-color: white;
+    width: 30rem;
+    height: 20rem;
+    padding: 2rem;
+    border-radius: 0;
+    display: flex;
+    gap: 2rem;
+    justify-content: flex-end;
+    align-items: 0;
+    flex-direction: column;
+  }
+  .section .section-three {
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 10rem;
+  }
+}
